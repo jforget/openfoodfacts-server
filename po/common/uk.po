@@ -6878,5 +6878,5 @@ msgstr "підсолоджувач sweetener\n"
 
 msgctxt "description"
 msgid "Description"
-msgstr ""
+msgstr "Опис"
 
