@@ -6859,3 +6859,7 @@ msgctxt "sweetener"
 msgid "sweetener"
 msgstr "sladidlo"
 
+msgctxt "description"
+msgid "Description"
+msgstr ""
+
