@@ -6864,5 +6864,5 @@ msgstr ""
 
 msgctxt "description"
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
