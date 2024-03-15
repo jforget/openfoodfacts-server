@@ -6864,5 +6864,5 @@ msgstr "ממתיק"
 
 msgctxt "description"
 msgid "Description"
-msgstr ""
+msgstr "תיאור"
 
