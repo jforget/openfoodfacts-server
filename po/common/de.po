@@ -6864,5 +6864,5 @@ msgstr "Süßstoffe"
 
 msgctxt "description"
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
