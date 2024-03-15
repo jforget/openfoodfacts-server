@@ -6864,5 +6864,5 @@ msgstr "zoetstoffen"
 
 msgctxt "description"
 msgid "Description"
-msgstr ""
+msgstr "Beschrijving"
 
