@@ -6848,3 +6848,7 @@ msgctxt "sweetener"
 msgid "sweetener"
 msgstr ""
 
+msgctxt "description"
+msgid "Description"
+msgstr ""
+
