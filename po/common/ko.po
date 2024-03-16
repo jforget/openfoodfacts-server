@@ -6863,5 +6863,5 @@ msgstr "감미료"
 
 msgctxt "description"
 msgid "Description"
-msgstr ""
+msgstr "설명"
 
