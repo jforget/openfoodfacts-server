@@ -6861,5 +6861,5 @@ msgstr "tatlandırıcı"
 
 msgctxt "description"
 msgid "Description"
-msgstr ""
+msgstr "Açıklama"
 
