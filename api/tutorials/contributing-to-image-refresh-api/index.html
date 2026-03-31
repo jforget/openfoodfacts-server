@@ -17,19 +17,22 @@
         <link rel="next" href="../creating-a-local-cache-of-open-food-facts-data/">
       
       
+        
+      
+      
       <link rel="icon" href="https://static.openfoodfacts.org/images/logos/off-logo-favicon-light.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Contributing to image refresh api - Product Opener (Open Food Facts Server)</title>
+        <title>Using the Image Refresh API - Product Opener (Open Food Facts Server)</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -54,7 +57,6 @@
 
     
     
-    
   </head>
   
   
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tutorial-using-the-image-refresh-api" class="md-skip">
+        <a href="#using-the-image-refresh-api" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Contributing to image refresh api
+              Using the Image Refresh API
             
           </span>
         </div>
@@ -192,7 +194,7 @@
         <a href="https://github.com/openfoodfacts/openfoodfacts-server" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -237,7 +239,7 @@
       <a href="https://github.com/openfoodfacts/openfoodfacts-server" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -259,9 +261,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Product Opener (Open Food Facts web server) documentation
+  
+
     
   </span>
+  
   
 
       </a>
@@ -294,9 +301,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Api
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -305,7 +317,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Api
+            
+  
+    Api
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -321,9 +337,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Introduction to Open Food Facts API documentation
+  
+
     
   </span>
+  
   
 
       </a>
@@ -344,9 +365,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Introduction to the Robotoff Project
+  
+
     
   </span>
+  
   
 
       </a>
@@ -367,9 +393,14 @@
   
   
   <span class="md-ellipsis">
-    Tutorial dev journey
+    
+  
+    Tutorials for Common developer journeys
+  
+
     
   </span>
+  
   
 
       </a>
@@ -390,9 +421,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Tutorial on using the Open Food Facts API
+  
+
     
   </span>
+  
   
 
       </a>
@@ -413,9 +449,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Tutorial on uploading images to the Open Food Facts API
+  
+
     
   </span>
+  
   
 
       </a>
@@ -436,9 +477,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to download product images
+  
+
     
   </span>
+  
   
 
       </a>
@@ -459,9 +505,42 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Explanation on Knowledge panels
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explain-product-attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explanation on Product Attributes
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -482,9 +561,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Reference: API and product schema change log
+  
+
     
   </span>
+  
   
 
       </a>
@@ -505,9 +589,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Reference: Barcode Normalization
+  
+
     
   </span>
+  
   
 
       </a>
@@ -528,9 +617,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Reference: API CheatSheet
+  
+
     
   </span>
+  
   
 
       </a>
@@ -551,9 +645,14 @@
   
   
   <span class="md-ellipsis">
-    Reference OpenAPI documentation for v2
+    
+  
+    Reference OpenAPI documentation for API v2
+  
+
     
   </span>
+  
   
 
       </a>
@@ -574,9 +673,14 @@
   
   
   <span class="md-ellipsis">
-    Reference OpenAPI documentation for v3
+    
+  
+    Reference OpenAPI documentation for API v3
+  
+
     
   </span>
+  
   
 
       </a>
@@ -597,9 +701,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Open Food Facts AWS images dataset
+  
+
     
   </span>
+  
   
 
       </a>
@@ -620,9 +729,14 @@
   
   
   <span class="md-ellipsis">
-    Leveraging links to wikidata
+    
+  
+    How to leverage links to Wikidata (and Wikipedia)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -648,26 +762,35 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_15" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_16" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_15" id="__nav_2_15_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_16" id="__nav_2_16_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_15_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_15">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_16_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_16">
             <span class="md-nav__icon md-icon"></span>
-            Tutorials
+            
+  
+    Tutorials
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -683,9 +806,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Adding missing products
+  
+
     
   </span>
+  
   
 
       </a>
@@ -706,9 +834,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Comparing sodas
+  
+
     
   </span>
+  
   
 
       </a>
@@ -730,15 +863,22 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   
   <span class="md-ellipsis">
-    Contributing to image refresh api
+    
+  
+    Using the Image Refresh API
+  
+
     
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -749,9 +889,14 @@
   
   
   <span class="md-ellipsis">
-    Contributing to image refresh api
+    
+  
+    Using the Image Refresh API
+  
+
     
   </span>
+  
   
 
       </a>
@@ -762,6 +907,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -770,46 +917,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tutorial-using-the-image-refresh-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      📸 Tutorial: Using the Image Refresh API
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📸 Tutorial: Using the Image Refresh API">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#core-concept" class="md-nav__link">
     <span class="md-ellipsis">
-      Core Concept
+      
+        Core Concept
+      
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#the-api-endpoint" class="md-nav__link">
     <span class="md-ellipsis">
-      The API Endpoint
+      
+        The API Endpoint
+      
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#understanding-the-api-response" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding the API Response
+      
+        Understanding the API Response
+      
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#client-side-implementation-logic" class="md-nav__link">
     <span class="md-ellipsis">
-      Client-Side Implementation Logic
+      
+        Client-Side Implementation Logic
+      
     </span>
   </a>
   
@@ -819,7 +964,9 @@
           <li class="md-nav__item">
   <a href="#generating-button-text" class="md-nav__link">
     <span class="md-ellipsis">
-      Generating Button Text
+      
+        Generating Button Text
+      
     </span>
   </a>
   
@@ -828,14 +975,11 @@
           <li class="md-nav__item">
   <a href="#optional-displaying-the-image-age" class="md-nav__link">
     <span class="md-ellipsis">
-      Optional: Displaying the Image Age
+      
+        Optional: Displaying the Image Age
+      
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -865,9 +1009,14 @@
   
   
   <span class="md-ellipsis">
-    Creating a local cache of open food facts data
+    
+  
+    Open Food Facts Local Caching: A Tutorial
+  
+
     
   </span>
+  
   
 
       </a>
@@ -888,9 +1037,14 @@
   
   
   <span class="md-ellipsis">
-    Finding healthy cereals
+    
+  
+    Finding healthy breakfast cereals
+  
+
     
   </span>
+  
   
 
       </a>
@@ -911,9 +1065,14 @@
   
   
   <span class="md-ellipsis">
-    Folksonomy engine
+    
+  
+    Folksonomy Engine
+  
+
     
   </span>
+  
   
 
       </a>
@@ -934,9 +1093,14 @@
   
   
   <span class="md-ellipsis">
-    Get in touch with openfoodfacts
+    
+  
+    Get in touch with OpenFoodFacts
+  
+
     
   </span>
+  
   
 
       </a>
@@ -957,9 +1121,14 @@
   
   
   <span class="md-ellipsis">
-    Get ingredient related analysis
+    
+  
+    Get ingredient related analysis on new or existing products
+  
+
     
   </span>
+  
   
 
       </a>
@@ -980,9 +1149,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Helping your users get the Green-Score for any product
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1003,9 +1177,42 @@
   
   
   <span class="md-ellipsis">
-    Get the nutriscore
+    
+  
+    Get the Nutri-Score
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-personal-with-attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎯 Tutorial: Personalizing Product Matching with Open Food Facts Attributes API
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1026,9 +1233,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to create data quality controls in your app
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1049,9 +1261,14 @@
   
   
   <span class="md-ellipsis">
-    License be on the legal side
+    
+  
+    License - be on the legal side
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1072,9 +1289,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Product prices
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1095,9 +1317,14 @@
   
   
   <span class="md-ellipsis">
-    Reporting issues with nutripatrol
+    
+  
+    Reporting issues with NutriPatrol
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1118,9 +1345,14 @@
   
   
   <span class="md-ellipsis">
-    Scanning barcodes
+    
+  
+    Implementing a World-Class Barcode Scan Experience for Your App
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1141,9 +1373,14 @@
   
   
   <span class="md-ellipsis">
-    Scanning cosmetics pet food and other products
+    
+  
+    Open Beauty Facts, Open Pet Food Facts, Open Products Facts experimental and specific APIs
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1164,9 +1401,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Providing knowledge panels for a particular Open Food Facts facet (category, brand, etc...)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1213,9 +1455,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Dev
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1224,7 +1471,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Dev
+            
+  
+    Dev
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1240,9 +1491,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Introduction to Product Opener developer documentation
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1263,9 +1519,42 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to add a translation
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/how-to-add-generic-recommendation-panel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to Add a Generic Recommendation Panel for a Category
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1286,9 +1575,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to debug Minion import and export tasks
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1309,9 +1603,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to develop on the producers platform
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1332,9 +1631,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use Docker to Develop - a guide
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1355,9 +1659,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use WebComponents
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1378,9 +1687,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How can I learn the Perl programming language?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1401,9 +1715,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to setup the Dev environment (quick start guide)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1424,9 +1743,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to deploy a release
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1447,9 +1771,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to update Agribalyse (Ecoscore)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1470,9 +1799,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use automated pull request actions
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1493,9 +1827,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use direnv
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1516,9 +1855,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use Gitpod for Remote Development
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1539,9 +1883,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use pages from openfoodfacts-web
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1562,9 +1911,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use Perl REPL (re.pl)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1585,9 +1939,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use VSCode
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1608,9 +1967,70 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to write and run tests
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/explain-dynamic-test-grouping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explain Dynamic Test Grouping System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/explain-javascript-usage-and-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explain JavaScript Usage and Strategy
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1631,9 +2051,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Explain nutrition data
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1654,9 +2079,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Explanation on packaging data
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1677,9 +2107,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Explain personal search
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1700,9 +2135,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Explanation on Docker Setup of pro platform for development
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1723,9 +2163,42 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Explanation on Taxonomy Build Cache
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/explain-user-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explain User Management and Authentication
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1746,9 +2219,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Reference Docker / Makefile commands
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1769,9 +2247,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Perl reference documentation
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1792,9 +2275,123 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Reference Perl code documentation
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../explain-frontend-build-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explain Frontend Build Scripts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Events
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Events
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event Schemas
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1827,6 +2424,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1835,46 +2434,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tutorial-using-the-image-refresh-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      📸 Tutorial: Using the Image Refresh API
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📸 Tutorial: Using the Image Refresh API">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#core-concept" class="md-nav__link">
     <span class="md-ellipsis">
-      Core Concept
+      
+        Core Concept
+      
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#the-api-endpoint" class="md-nav__link">
     <span class="md-ellipsis">
-      The API Endpoint
+      
+        The API Endpoint
+      
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#understanding-the-api-response" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding the API Response
+      
+        Understanding the API Response
+      
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#client-side-implementation-logic" class="md-nav__link">
     <span class="md-ellipsis">
-      Client-Side Implementation Logic
+      
+        Client-Side Implementation Logic
+      
     </span>
   </a>
   
@@ -1884,7 +2481,9 @@
           <li class="md-nav__item">
   <a href="#generating-button-text" class="md-nav__link">
     <span class="md-ellipsis">
-      Generating Button Text
+      
+        Generating Button Text
+      
     </span>
   </a>
   
@@ -1893,14 +2492,11 @@
           <li class="md-nav__item">
   <a href="#optional-displaying-the-image-age" class="md-nav__link">
     <span class="md-ellipsis">
-      Optional: Displaying the Image Age
+      
+        Optional: Displaying the Image Age
+      
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1919,6 +2515,7 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
@@ -1933,9 +2530,7 @@
   
 
 
-  <h1>Contributing to image refresh api</h1>
-
-<h2 id="tutorial-using-the-image-refresh-api">📸 Tutorial: Using the Image Refresh API<a class="headerlink" href="#tutorial-using-the-image-refresh-api" title="Permanent link">#</a></h2>
+<h1 id="using-the-image-refresh-api">Using the Image Refresh API<a class="headerlink" href="#using-the-image-refresh-api" title="Permanent link">#</a></h1>
 <p>This tutorial explains how to use the Open Food Facts API to identify which product images are missing or outdated. This allows your application to prompt users to take or retake specific photos, helping keep the database current and complete. The more drastic solution is to put back the user into a refresh/completion pipeline before he can access the product.</p>
 <h3 id="core-concept">Core Concept<a class="headerlink" href="#core-concept" title="Permanent link">#</a></h3>
 <p>The goal is to request a special field, <code>images_to_update_[lang]</code>, for a given product. The API will return a list of key image types (front, ingredients, etc.) and a value indicating their status: either they are missing or they are old.</p>
@@ -1943,14 +2538,14 @@
 <h3 id="the-api-endpoint">The API Endpoint<a class="headerlink" href="#the-api-endpoint" title="Permanent link">#</a></h3>
 <p>To get the status of a product's images, you make a standard <code>GET</code> request to the product endpoint and specify the <code>images_to_update_[lang]</code> in the <code>fields</code> parameter.</p>
 <p><strong>URL Structure:</strong></p>
-<div class="highlight"><pre><span></span><code>https://{world|fr|...}.openfoodfacts.org/api/v2/product/[BARCODE]?fields=images_to_update_[LANG]
+<div class="highlight"><pre><span></span><code>https://<span class="o">{</span>world<span class="p">|</span>fr<span class="p">|</span>...<span class="o">}</span>.openfoodfacts.org/api/v2/product/<span class="o">[</span>BARCODE<span class="o">]</span>?fields<span class="o">=</span>images_to_update_<span class="o">[</span>LANG<span class="o">]</span>
 </code></pre></div>
 <p><strong>Parameters:</strong></p>
-<p>* <code>[BARCODE]</code>: The barcode of the product you are querying.
-  * <code>[LANG]</code>: The two-letter <a href="https://static.openfoodfacts.org/data/taxonomies/languages.json">ISO language code</a> for which you want to check the images (e.g., <code>en</code>, <code>fr</code>, <code>de</code>). Your application should use its current language setting here.</p>
+<p>- <code>[BARCODE]</code>: The barcode of the product you are querying.
+  - <code>[LANG]</code>: The two-letter <a href="https://static.openfoodfacts.org/data/taxonomies/languages.json">ISO language code</a> for which you want to check the images (e.g., <code>en</code>, <code>fr</code>, <code>de</code>). Your application should use its current language setting here.</p>
 <p><strong>Example Request:</strong></p>
 <p>Here is a request for the French (<code>fr</code>) images for product <code>3483130043180</code>.</p>
-<div class="highlight"><pre><span></span><code>https://fr.openfoodfacts.org/api/v2/produit/3483130043180?fields=images_to_update_fr
+<div class="highlight"><pre><span></span><code>https://fr.openfoodfacts.org/api/v2/produit/3483130043180?fields<span class="o">=</span>images_to_update_fr
 </code></pre></div>
 <hr />
 <h3 id="understanding-the-api-response">Understanding the API Response<a class="headerlink" href="#understanding-the-api-response" title="Permanent link">#</a></h3>
@@ -1968,42 +2563,46 @@
 </code></pre></div>
 <p><strong>Interpreting the Response:</strong></p>
 <p>The <code>images_to_update_fr</code> object contains key-value pairs.</p>
-<p>* <strong>Key</strong>: The key is a combination of the <strong>image type</strong> and the <strong>language code</strong>, separated by an underscore (e.g., <code>front_fr</code>). The main image types are:
-      * <code>front</code>
-      * <code>ingredients</code>
-      * <code>nutrition</code>
-      * <code>packaging</code>
-  * <strong>Value</strong>: The value tells you the status of the image.
-      * <code>0</code>: The image <strong>does not exist</strong>. The user should be prompted to <strong>take</strong> a new picture.
-      * <code>&gt; 0</code>: The image <strong>exists but is old</strong>. The value is the age of the image in <strong>seconds</strong>. The user should be prompted to <strong>refresh</strong> it with a new one.</p>
+<ul>
+<li><strong>Key</strong>: The key is a combination of the <strong>image type</strong> and the <strong>language code</strong>, separated by an underscore (e.g., <code>front_fr</code>). The main image types are:
+      - <code>front</code>
+      - <code>ingredients</code>
+      - <code>nutrition</code>
+      - <code>packaging</code><ul>
+<li><strong>Value</strong>: The value tells you the status of the image.
+    - <code>0</code>: The image <strong>does not exist</strong>. The user should be prompted to <strong>take</strong> a new picture.
+    - <code>&gt; 0</code>: The image <strong>exists but is old</strong>. The value is the age of the image in <strong>seconds</strong>. The user should be prompted to <strong>refresh</strong> it with a new one.</li>
+</ul>
+</li>
+</ul>
 <hr />
 <h3 id="client-side-implementation-logic">Client-Side Implementation Logic<a class="headerlink" href="#client-side-implementation-logic" title="Permanent link">#</a></h3>
 <p>Your application should parse this response to dynamically generate calls to action (like buttons).</p>
 <h4 id="generating-button-text">Generating Button Text<a class="headerlink" href="#generating-button-text" title="Permanent link">#</a></h4>
 <p>Here is a pseudo-code example demonstrating how to create button text based on the API response.</p>
-<div class="highlight"><pre><span></span><code>// Assume &#39;images_to_update&#39; is the object from the API response
-// e.g., { packaging_fr: 0, front_fr: 83734290 }
+<div class="highlight"><pre><span></span><code><span class="c1">// Assume &#39;images_to_update&#39; is the object from the API response</span>
+<span class="c1">// e.g., { packaging_fr: 0, front_fr: 83734290 }</span>
 
-for (key, value) in images_to_update:
-    // 1. Determine the action (verb)
-    let verb = &quot;&quot;
-    if value == 0:
-        verb = &quot;Take&quot;  // Image is missing
-    else:
-        verb = &quot;Refresh&quot; // Image is old
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">)</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">images_to_update</span><span class="o">:</span>
+<span class="w">    </span><span class="c1">// 1. Determine the action (verb)</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">verb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">verb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Take&quot;</span><span class="w">  </span><span class="c1">// Image is missing</span>
+<span class="w">    </span><span class="k">else</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">verb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Refresh&quot;</span><span class="w"> </span><span class="c1">// Image is old</span>
 
-    // 2. Get the field name and language
-    // e.g., &quot;front_fr&quot; -&gt; [&quot;front&quot;, &quot;fr&quot;]
-    let parts = key.split(&quot;_&quot;)
-    let field_name = parts[0]
-    let field_language = parts[1] // Useful for localization
+<span class="w">    </span><span class="c1">// 2. Get the field name and language</span>
+<span class="w">    </span><span class="c1">// e.g., &quot;front_fr&quot; -&gt; [&quot;front&quot;, &quot;fr&quot;]</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">parts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">key</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">field_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">parts</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">field_language</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">parts</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span><span class="w"> </span><span class="c1">// Useful for localization</span>
 
-    // 3. Create the button text
-    // You would use localized strings in a real app
-    let button_text = `${verb} ${field_name} picture`
+<span class="w">    </span><span class="c1">// 3. Create the button text</span>
+<span class="w">    </span><span class="c1">// You would use localized strings in a real app</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">button_text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">verb</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">field_name</span><span class="si">}</span><span class="sb"> picture`</span>
 
-    // Now, create a button with this text.
-    // e.g., &quot;Refresh front picture&quot;, &quot;Take packaging picture&quot;
+<span class="w">    </span><span class="c1">// Now, create a button with this text.</span>
+<span class="w">    </span><span class="c1">// e.g., &quot;Refresh front picture&quot;, &quot;Take packaging picture&quot;</span>
 </code></pre></div>
 <h4 id="optional-displaying-the-image-age">Optional: Displaying the Image Age<a class="headerlink" href="#optional-displaying-the-image-age" title="Permanent link">#</a></h4>
 <p>For images that need refreshing (where the value is <code>&gt; 0</code>), you can provide more context to the user by converting the age in seconds to a human-readable format.</p>
@@ -2083,10 +2682,11 @@ for (key, value) in images_to_update:
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.edit"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

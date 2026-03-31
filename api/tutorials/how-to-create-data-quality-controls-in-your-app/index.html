@@ -11,14 +11,17 @@
         <link rel="canonical" href="https://openfoodfacts.github.io/openfoodfacts-server/api/tutorials/how-to-create-data-quality-controls-in-your-app/">
       
       
-        <link rel="prev" href="../get-the-nutriscore/">
+        <link rel="prev" href="../getting-personal-with-attributes/">
       
       
         <link rel="next" href="../license-be-on-the-legal-side/">
       
       
+        
+      
+      
       <link rel="icon" href="https://static.openfoodfacts.org/images/logos/off-logo-favicon-light.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -26,10 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -54,7 +57,6 @@
 
     
     
-    
   </head>
   
   
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ensuring-data-quality-for-open-food-facts-contributions" class="md-skip">
+        <a href="#how-to-create-data-quality-controls-in-your-app" class="md-skip">
           Skip to content
         </a>
       
@@ -192,7 +194,7 @@
         <a href="https://github.com/openfoodfacts/openfoodfacts-server" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -237,7 +239,7 @@
       <a href="https://github.com/openfoodfacts/openfoodfacts-server" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -259,9 +261,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Product Opener (Open Food Facts web server) documentation
+  
+
     
   </span>
+  
   
 
       </a>
@@ -294,9 +301,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Api
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -305,7 +317,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Api
+            
+  
+    Api
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -321,9 +337,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Introduction to Open Food Facts API documentation
+  
+
     
   </span>
+  
   
 
       </a>
@@ -344,9 +365,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Introduction to the Robotoff Project
+  
+
     
   </span>
+  
   
 
       </a>
@@ -367,9 +393,14 @@
   
   
   <span class="md-ellipsis">
-    Tutorial dev journey
+    
+  
+    Tutorials for Common developer journeys
+  
+
     
   </span>
+  
   
 
       </a>
@@ -390,9 +421,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Tutorial on using the Open Food Facts API
+  
+
     
   </span>
+  
   
 
       </a>
@@ -413,9 +449,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Tutorial on uploading images to the Open Food Facts API
+  
+
     
   </span>
+  
   
 
       </a>
@@ -436,9 +477,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to download product images
+  
+
     
   </span>
+  
   
 
       </a>
@@ -459,9 +505,42 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Explanation on Knowledge panels
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explain-product-attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explanation on Product Attributes
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -482,9 +561,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Reference: API and product schema change log
+  
+
     
   </span>
+  
   
 
       </a>
@@ -505,9 +589,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Reference: Barcode Normalization
+  
+
     
   </span>
+  
   
 
       </a>
@@ -528,9 +617,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Reference: API CheatSheet
+  
+
     
   </span>
+  
   
 
       </a>
@@ -551,9 +645,14 @@
   
   
   <span class="md-ellipsis">
-    Reference OpenAPI documentation for v2
+    
+  
+    Reference OpenAPI documentation for API v2
+  
+
     
   </span>
+  
   
 
       </a>
@@ -574,9 +673,14 @@
   
   
   <span class="md-ellipsis">
-    Reference OpenAPI documentation for v3
+    
+  
+    Reference OpenAPI documentation for API v3
+  
+
     
   </span>
+  
   
 
       </a>
@@ -597,9 +701,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Open Food Facts AWS images dataset
+  
+
     
   </span>
+  
   
 
       </a>
@@ -620,9 +729,14 @@
   
   
   <span class="md-ellipsis">
-    Leveraging links to wikidata
+    
+  
+    How to leverage links to Wikidata (and Wikipedia)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -648,26 +762,35 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_15" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_16" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_15" id="__nav_2_15_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_16" id="__nav_2_16_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_15_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_15">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_16_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_16">
             <span class="md-nav__icon md-icon"></span>
-            Tutorials
+            
+  
+    Tutorials
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -683,9 +806,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Adding missing products
+  
+
     
   </span>
+  
   
 
       </a>
@@ -706,9 +834,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Comparing sodas
+  
+
     
   </span>
+  
   
 
       </a>
@@ -729,9 +862,14 @@
   
   
   <span class="md-ellipsis">
-    Contributing to image refresh api
+    
+  
+    Using the Image Refresh API
+  
+
     
   </span>
+  
   
 
       </a>
@@ -752,9 +890,14 @@
   
   
   <span class="md-ellipsis">
-    Creating a local cache of open food facts data
+    
+  
+    Open Food Facts Local Caching: A Tutorial
+  
+
     
   </span>
+  
   
 
       </a>
@@ -775,9 +918,14 @@
   
   
   <span class="md-ellipsis">
-    Finding healthy cereals
+    
+  
+    Finding healthy breakfast cereals
+  
+
     
   </span>
+  
   
 
       </a>
@@ -798,9 +946,14 @@
   
   
   <span class="md-ellipsis">
-    Folksonomy engine
+    
+  
+    Folksonomy Engine
+  
+
     
   </span>
+  
   
 
       </a>
@@ -821,9 +974,14 @@
   
   
   <span class="md-ellipsis">
-    Get in touch with openfoodfacts
+    
+  
+    Get in touch with OpenFoodFacts
+  
+
     
   </span>
+  
   
 
       </a>
@@ -844,9 +1002,14 @@
   
   
   <span class="md-ellipsis">
-    Get ingredient related analysis
+    
+  
+    Get ingredient related analysis on new or existing products
+  
+
     
   </span>
+  
   
 
       </a>
@@ -867,9 +1030,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Helping your users get the Green-Score for any product
+  
+
     
   </span>
+  
   
 
       </a>
@@ -890,9 +1058,42 @@
   
   
   <span class="md-ellipsis">
-    Get the nutriscore
+    
+  
+    Get the Nutri-Score
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-personal-with-attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎯 Tutorial: Personalizing Product Matching with Open Food Facts Attributes API
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -914,15 +1115,22 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   
   <span class="md-ellipsis">
+    
+  
     How to create data quality controls in your app
+  
+
     
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -933,9 +1141,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to create data quality controls in your app
+  
+
     
   </span>
+  
   
 
       </a>
@@ -945,6 +1158,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -956,7 +1171,9 @@
         <li class="md-nav__item">
   <a href="#ensuring-data-quality-for-open-food-facts-contributions" class="md-nav__link">
     <span class="md-ellipsis">
-      Ensuring Data Quality for Open Food Facts Contributions
+      
+        Ensuring Data Quality for Open Food Facts Contributions
+      
     </span>
   </a>
   
@@ -966,7 +1183,9 @@
           <li class="md-nav__item">
   <a href="#prevention-is-key" class="md-nav__link">
     <span class="md-ellipsis">
-      Prevention is Key
+      
+        Prevention is Key
+      
     </span>
   </a>
   
@@ -975,7 +1194,9 @@
           <li class="md-nav__item">
   <a href="#addressing-errors-and-malicious-intent" class="md-nav__link">
     <span class="md-ellipsis">
-      Addressing Errors and Malicious Intent
+      
+        Addressing Errors and Malicious Intent
+      
     </span>
   </a>
   
@@ -984,7 +1205,9 @@
           <li class="md-nav__item">
   <a href="#cater-for-the-complexity-in-food-nutrition-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Cater for the complexity in Food &amp; Nutrition Data
+      
+        Cater for the complexity in Food &amp; Nutrition Data
+      
     </span>
   </a>
   
@@ -1016,9 +1239,14 @@
   
   
   <span class="md-ellipsis">
-    License be on the legal side
+    
+  
+    License - be on the legal side
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1039,9 +1267,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Product prices
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1062,9 +1295,14 @@
   
   
   <span class="md-ellipsis">
-    Reporting issues with nutripatrol
+    
+  
+    Reporting issues with NutriPatrol
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1085,9 +1323,14 @@
   
   
   <span class="md-ellipsis">
-    Scanning barcodes
+    
+  
+    Implementing a World-Class Barcode Scan Experience for Your App
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1108,9 +1351,14 @@
   
   
   <span class="md-ellipsis">
-    Scanning cosmetics pet food and other products
+    
+  
+    Open Beauty Facts, Open Pet Food Facts, Open Products Facts experimental and specific APIs
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1131,9 +1379,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Providing knowledge panels for a particular Open Food Facts facet (category, brand, etc...)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1180,9 +1433,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Dev
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1191,7 +1449,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Dev
+            
+  
+    Dev
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1207,9 +1469,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Introduction to Product Opener developer documentation
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1230,9 +1497,42 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to add a translation
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/how-to-add-generic-recommendation-panel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to Add a Generic Recommendation Panel for a Category
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1253,9 +1553,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to debug Minion import and export tasks
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1276,9 +1581,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to develop on the producers platform
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1299,9 +1609,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use Docker to Develop - a guide
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1322,9 +1637,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use WebComponents
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1345,9 +1665,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How can I learn the Perl programming language?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1368,9 +1693,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to setup the Dev environment (quick start guide)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1391,9 +1721,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to deploy a release
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1414,9 +1749,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to update Agribalyse (Ecoscore)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1437,9 +1777,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use automated pull request actions
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1460,9 +1805,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use direnv
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1483,9 +1833,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use Gitpod for Remote Development
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1506,9 +1861,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use pages from openfoodfacts-web
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1529,9 +1889,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use Perl REPL (re.pl)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1552,9 +1917,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use VSCode
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1575,9 +1945,70 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to write and run tests
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/explain-dynamic-test-grouping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explain Dynamic Test Grouping System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/explain-javascript-usage-and-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explain JavaScript Usage and Strategy
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1598,9 +2029,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Explain nutrition data
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1621,9 +2057,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Explanation on packaging data
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1644,9 +2085,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Explain personal search
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1667,9 +2113,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Explanation on Docker Setup of pro platform for development
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1690,9 +2141,42 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Explanation on Taxonomy Build Cache
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/explain-user-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explain User Management and Authentication
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1713,9 +2197,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Reference Docker / Makefile commands
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1736,9 +2225,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Perl reference documentation
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1759,9 +2253,123 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Reference Perl code documentation
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../explain-frontend-build-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explain Frontend Build Scripts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Events
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Events
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event Schemas
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1794,6 +2402,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1804,7 +2414,9 @@
         <li class="md-nav__item">
   <a href="#ensuring-data-quality-for-open-food-facts-contributions" class="md-nav__link">
     <span class="md-ellipsis">
-      Ensuring Data Quality for Open Food Facts Contributions
+      
+        Ensuring Data Quality for Open Food Facts Contributions
+      
     </span>
   </a>
   
@@ -1814,7 +2426,9 @@
           <li class="md-nav__item">
   <a href="#prevention-is-key" class="md-nav__link">
     <span class="md-ellipsis">
-      Prevention is Key
+      
+        Prevention is Key
+      
     </span>
   </a>
   
@@ -1823,7 +2437,9 @@
           <li class="md-nav__item">
   <a href="#addressing-errors-and-malicious-intent" class="md-nav__link">
     <span class="md-ellipsis">
-      Addressing Errors and Malicious Intent
+      
+        Addressing Errors and Malicious Intent
+      
     </span>
   </a>
   
@@ -1832,7 +2448,9 @@
           <li class="md-nav__item">
   <a href="#cater-for-the-complexity-in-food-nutrition-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Cater for the complexity in Food &amp; Nutrition Data
+      
+        Cater for the complexity in Food &amp; Nutrition Data
+      
     </span>
   </a>
   
@@ -1853,6 +2471,7 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
@@ -1867,18 +2486,21 @@
   
 
 
-  <h1>How to create data quality controls in your app</h1>
-
+<h1 id="how-to-create-data-quality-controls-in-your-app">How to create data quality controls in your app<a class="headerlink" href="#how-to-create-data-quality-controls-in-your-app" title="Permanent link">#</a></h1>
 <h2 id="ensuring-data-quality-for-open-food-facts-contributions">Ensuring Data Quality for Open Food Facts Contributions<a class="headerlink" href="#ensuring-data-quality-for-open-food-facts-contributions" title="Permanent link">#</a></h2>
 <p>This tutorial will guide you through best practices for maintaining high-quality data contributions to Open Food Facts through your app. As you know, Open Food Facts (and your app, since you have implemented or are implementing contributing back to Open Food Facts) leverages crowdsourcing, which is a fantastic way to gather a vast amount of information. However, it also necessitates measures to ensure data accuracy.</p>
 <h3 id="prevention-is-key">Prevention is Key<a class="headerlink" href="#prevention-is-key" title="Permanent link">#</a></h3>
 <p>The most effective approach lies in prevention. Here's how your app's interface can play a crucial role:</p>
 <ul>
-<li><strong>Instant Feedback:</strong><p>-   Nutritional values: Implement checks that flag inconsistencies and prompt users to verify their entries.
-  -   Ingredient language compatibility: Ensure users take legible photos of the ingredient list, and send them in the actual language they are written in.
-  -   Selfie detection: On-device libraries <a href="https://developers.google.com/ml-kit/vision/face-detection/android">like MLKit</a> can detect whether the user is taking a selfie instead of a product, and can warn them about it. 
--   <strong>Data Quality Facets:</strong> Utilize the data quality facets established by Open Food Facts and recode some (or all of) them within your app. These facets act as guidelines for your users to ensure comprehensive and accurate data collection.</p>
+<li><strong>Instant Feedback:</strong><ul>
+<li>Nutritional values: Implement checks that flag inconsistencies and prompt users to verify their entries.</li>
+<li>Ingredient language compatibility: Ensure users take legible photos of the ingredient list, and send them in the actual language they are written in.</li>
+<li>Selfie detection: On-device libraries <a href="https://developers.google.com/ml-kit/vision/face-detection/android">like MLKit</a> can detect whether the user is taking a selfie instead of a product, and can warn them about it.</li>
+</ul>
 </li>
+</ul>
+<ul>
+<li><strong>Data Quality Facets:</strong> Utilize the data quality facets established by Open Food Facts and recode some (or all of) them within your app. These facets act as guidelines for your users to ensure comprehensive and accurate data collection.</li>
 </ul>
 <ul>
 <li><strong>Non-Food Item Prevention:</strong> Implement functionalities that routes non-food items like cosmetics to the right database (just ask your users if it's a food or a cosmetic).</li>
@@ -1889,24 +2511,24 @@
 </ul>
 <ul>
 <li><strong>Versioning and User Anonymization:</strong>\
-    When sending data to Open Food Facts, include the app version used for the contribution along with an anonymized user identifier. This allows Open Food Facts to block repeat offenders (and not your app's global account) individually if necessary, without the need for them to create an Open Food Facts account.</li>
+  When sending data to Open Food Facts, include the app version used for the contribution along with an anonymized user identifier. This allows Open Food Facts to block repeat offenders (and not your app's global account) individually if necessary, without the need for them to create an Open Food Facts account.</li>
 </ul>
 <ul>
 <li><strong>Collaboration:</strong>\
-    If you suspect recurring issues with user-generated data potentially stemming from app functionalities, don't hesitate to reach out to the Open Food Facts team. We're happy to assist in troubleshooting, UI feedback…</li>
+  If you suspect recurring issues with user-generated data potentially stemming from app functionalities, don't hesitate to reach out to the Open Food Facts team. We're happy to assist in troubleshooting, UI feedback…</li>
 </ul>
 <h3 id="cater-for-the-complexity-in-food-nutrition-data">Cater for the complexity in Food &amp; Nutrition Data<a class="headerlink" href="#cater-for-the-complexity-in-food-nutrition-data" title="Permanent link">#</a></h3>
 <ul>
 <li><strong>Edge Cases:</strong>\
-    Food and nutrition data can be intricate. Consider edge cases like dehydrated products that require rehydration for accurate nutritional value representation.</li>
+  Food and nutrition data can be intricate. Consider edge cases like dehydrated products that require rehydration for accurate nutritional value representation.</li>
 </ul>
 <ul>
 <li><strong>Global Variations:</strong>\
-    Nutritional facts tables differ internationally. Be mindful of these variations (e.g., US vs. European formats) and the need for appropriate labeling within your app.</li>
+  Nutritional facts tables differ internationally. Be mindful of these variations (e.g., US vs. European formats) and the need for appropriate labeling within your app.</li>
 </ul>
 <ul>
 <li><strong>"As Sold" vs. "As Prepared" Values:</strong>\
-    Nutritional information can be presented based on the product's state, "as sold" or "as prepared." Ensure clarity within your app regarding these variations.</li>
+  Nutritional information can be presented based on the product's state, "as sold" or "as prepared." Ensure clarity within your app regarding these variations.</li>
 </ul>
 <ul>
 <li><strong>A photo is better than nothing at all or bad data alone</strong>
@@ -1961,10 +2583,11 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.edit"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

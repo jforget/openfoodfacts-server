@@ -11,14 +11,17 @@
         <link rel="canonical" href="https://openfoodfacts.github.io/openfoodfacts-server/api/ref-api-and-product-schema-change-log/">
       
       
-        <link rel="prev" href="../explain-knowledge-panels/">
+        <link rel="prev" href="../explain-product-attributes/">
       
       
         <link rel="next" href="../ref-barcode-normalization/">
       
       
+        
+      
+      
       <link rel="icon" href="https://static.openfoodfacts.org/images/logos/off-logo-favicon-light.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -26,10 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -52,7 +55,6 @@
     
       
 
-    
     
     
   </head>
@@ -192,7 +194,7 @@
         <a href="https://github.com/openfoodfacts/openfoodfacts-server" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -237,7 +239,7 @@
       <a href="https://github.com/openfoodfacts/openfoodfacts-server" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -259,9 +261,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Product Opener (Open Food Facts web server) documentation
+  
+
     
   </span>
+  
   
 
       </a>
@@ -294,9 +301,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Api
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -305,7 +317,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Api
+            
+  
+    Api
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -321,9 +337,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Introduction to Open Food Facts API documentation
+  
+
     
   </span>
+  
   
 
       </a>
@@ -344,9 +365,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Introduction to the Robotoff Project
+  
+
     
   </span>
+  
   
 
       </a>
@@ -367,9 +393,14 @@
   
   
   <span class="md-ellipsis">
-    Tutorial dev journey
+    
+  
+    Tutorials for Common developer journeys
+  
+
     
   </span>
+  
   
 
       </a>
@@ -390,9 +421,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Tutorial on using the Open Food Facts API
+  
+
     
   </span>
+  
   
 
       </a>
@@ -413,9 +449,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Tutorial on uploading images to the Open Food Facts API
+  
+
     
   </span>
+  
   
 
       </a>
@@ -436,9 +477,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to download product images
+  
+
     
   </span>
+  
   
 
       </a>
@@ -459,9 +505,42 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Explanation on Knowledge panels
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../explain-product-attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explanation on Product Attributes
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -491,9 +570,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Reference: API and product schema change log
+  
+
     
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -504,9 +588,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Reference: API and product schema change log
+  
+
     
   </span>
+  
   
 
       </a>
@@ -529,7 +618,9 @@
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction
+      
+        Introduction
+      
     </span>
   </a>
   
@@ -538,7 +629,9 @@
         <li class="md-nav__item">
   <a href="#product-schema-version" class="md-nav__link">
     <span class="md-ellipsis">
-      Product schema version
+      
+        Product schema version
+      
     </span>
   </a>
   
@@ -547,7 +640,9 @@
         <li class="md-nav__item">
   <a href="#api-version" class="md-nav__link">
     <span class="md-ellipsis">
-      API version
+      
+        API version
+      
     </span>
   </a>
   
@@ -556,7 +651,9 @@
         <li class="md-nav__item">
   <a href="#schema-version-and-api-version-change-log" class="md-nav__link">
     <span class="md-ellipsis">
-      Schema version and API version change log
+      
+        Schema version and API version change log
+      
     </span>
   </a>
   
@@ -564,9 +661,33 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#2025-126-01-product-version-1003-api-version-35-new-product-nutrition-facts-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2025-126-01 - Product version 1003 - API version 3.5 - New product nutrition facts structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2025-06-11-product-version-1002-no-change-api-version-34-new-attributes-with-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2025-06-11 - Product version 1002 (no change) - API version 3.4 - New attributes with parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2025-06-11-product-version-1002-api-version-33-new-uploaded-and-selected-images-structure-new-api-for-image-upload-and-selection" class="md-nav__link">
     <span class="md-ellipsis">
-      2025-06-11 - Product version 1002 - API version 3.3 - New uploaded and selected images structure, new API for image upload and selection
+      
+        2025-06-11 - Product version 1002 - API version 3.3 - New uploaded and selected images structure, new API for image upload and selection
+      
     </span>
   </a>
   
@@ -575,7 +696,9 @@
           <li class="md-nav__item">
   <a href="#2025-03-12-product-version-1001-api-version-32-removed-ingredients_hierarchy-added-schema_version-made-brands-a-taxonomized-field" class="md-nav__link">
     <span class="md-ellipsis">
-      2025-03-12 - Product version 1001 - API version 3.2 - Removed ingredients_hierarchy, added schema_version, made brands a taxonomized field
+      
+        2025-03-12 - Product version 1001 - API version 3.2 - Removed ingredients_hierarchy, added schema_version, made brands a taxonomized field
+      
     </span>
   </a>
   
@@ -584,7 +707,9 @@
           <li class="md-nav__item">
   <a href="#2024-12-12-product-version-1000-api-version-31-renamed-ecoscore_-fields-to-environmental_score_" class="md-nav__link">
     <span class="md-ellipsis">
-      2024-12-12 - Product version 1000 - API version 3.1 - Renamed ecoscore_ fields to environmental_score_
+      
+        2024-12-12 - Product version 1000 - API version 3.1 - Renamed ecoscore_ fields to environmental_score_
+      
     </span>
   </a>
   
@@ -593,7 +718,9 @@
           <li class="md-nav__item">
   <a href="#warning-non-breaking-changes-not-indicated-in-change-logs-below" class="md-nav__link">
     <span class="md-ellipsis">
-      Warning: non-breaking changes not indicated in change logs below
+      
+        Warning: non-breaking changes not indicated in change logs below
+      
     </span>
   </a>
   
@@ -602,7 +729,9 @@
           <li class="md-nav__item">
   <a href="#product-version-999-changed-barcode-normalization" class="md-nav__link">
     <span class="md-ellipsis">
-      Product version 999 - Changed barcode normalization
+      
+        Product version 999 - Changed barcode normalization
+      
     </span>
   </a>
   
@@ -611,7 +740,9 @@
           <li class="md-nav__item">
   <a href="#product-version-998-api-version-3" class="md-nav__link">
     <span class="md-ellipsis">
-      Product version 998 - API version 3
+      
+        Product version 998 - API version 3
+      
     </span>
   </a>
   
@@ -620,7 +751,9 @@
           <li class="md-nav__item">
   <a href="#product-version-997-api-version-2" class="md-nav__link">
     <span class="md-ellipsis">
-      Product version 997 - API version 2
+      
+        Product version 997 - API version 2
+      
     </span>
   </a>
   
@@ -629,7 +762,9 @@
           <li class="md-nav__item">
   <a href="#product-version-996-api-version-1" class="md-nav__link">
     <span class="md-ellipsis">
-      Product version 996 - API version 1
+      
+        Product version 996 - API version 1
+      
     </span>
   </a>
   
@@ -638,7 +773,9 @@
           <li class="md-nav__item">
   <a href="#product-version-995-api-version-0" class="md-nav__link">
     <span class="md-ellipsis">
-      Product version 995 - API version 0
+      
+        Product version 995 - API version 0
+      
     </span>
   </a>
   
@@ -670,9 +807,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Reference: Barcode Normalization
+  
+
     
   </span>
+  
   
 
       </a>
@@ -693,9 +835,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Reference: API CheatSheet
+  
+
     
   </span>
+  
   
 
       </a>
@@ -716,9 +863,14 @@
   
   
   <span class="md-ellipsis">
-    Reference OpenAPI documentation for v2
+    
+  
+    Reference OpenAPI documentation for API v2
+  
+
     
   </span>
+  
   
 
       </a>
@@ -739,9 +891,14 @@
   
   
   <span class="md-ellipsis">
-    Reference OpenAPI documentation for v3
+    
+  
+    Reference OpenAPI documentation for API v3
+  
+
     
   </span>
+  
   
 
       </a>
@@ -762,9 +919,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Open Food Facts AWS images dataset
+  
+
     
   </span>
+  
   
 
       </a>
@@ -785,9 +947,14 @@
   
   
   <span class="md-ellipsis">
-    Leveraging links to wikidata
+    
+  
+    How to leverage links to Wikidata (and Wikipedia)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -811,26 +978,35 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_15" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_16" >
         
           
-          <label class="md-nav__link" for="__nav_2_15" id="__nav_2_15_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_16" id="__nav_2_16_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
+    
+  
     Tutorials
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_15_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_15">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_16">
             <span class="md-nav__icon md-icon"></span>
-            Tutorials
+            
+  
+    Tutorials
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -846,9 +1022,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Adding missing products
+  
+
     
   </span>
+  
   
 
       </a>
@@ -869,9 +1050,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Comparing sodas
+  
+
     
   </span>
+  
   
 
       </a>
@@ -892,9 +1078,14 @@
   
   
   <span class="md-ellipsis">
-    Contributing to image refresh api
+    
+  
+    Using the Image Refresh API
+  
+
     
   </span>
+  
   
 
       </a>
@@ -915,9 +1106,14 @@
   
   
   <span class="md-ellipsis">
-    Creating a local cache of open food facts data
+    
+  
+    Open Food Facts Local Caching: A Tutorial
+  
+
     
   </span>
+  
   
 
       </a>
@@ -938,9 +1134,14 @@
   
   
   <span class="md-ellipsis">
-    Finding healthy cereals
+    
+  
+    Finding healthy breakfast cereals
+  
+
     
   </span>
+  
   
 
       </a>
@@ -961,9 +1162,14 @@
   
   
   <span class="md-ellipsis">
-    Folksonomy engine
+    
+  
+    Folksonomy Engine
+  
+
     
   </span>
+  
   
 
       </a>
@@ -984,9 +1190,14 @@
   
   
   <span class="md-ellipsis">
-    Get in touch with openfoodfacts
+    
+  
+    Get in touch with OpenFoodFacts
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1007,9 +1218,14 @@
   
   
   <span class="md-ellipsis">
-    Get ingredient related analysis
+    
+  
+    Get ingredient related analysis on new or existing products
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1030,9 +1246,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Helping your users get the Green-Score for any product
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1053,9 +1274,42 @@
   
   
   <span class="md-ellipsis">
-    Get the nutriscore
+    
+  
+    Get the Nutri-Score
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/getting-personal-with-attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎯 Tutorial: Personalizing Product Matching with Open Food Facts Attributes API
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1076,9 +1330,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to create data quality controls in your app
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1099,9 +1358,14 @@
   
   
   <span class="md-ellipsis">
-    License be on the legal side
+    
+  
+    License - be on the legal side
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1122,9 +1386,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Product prices
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1145,9 +1414,14 @@
   
   
   <span class="md-ellipsis">
-    Reporting issues with nutripatrol
+    
+  
+    Reporting issues with NutriPatrol
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1168,9 +1442,14 @@
   
   
   <span class="md-ellipsis">
-    Scanning barcodes
+    
+  
+    Implementing a World-Class Barcode Scan Experience for Your App
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1191,9 +1470,14 @@
   
   
   <span class="md-ellipsis">
-    Scanning cosmetics pet food and other products
+    
+  
+    Open Beauty Facts, Open Pet Food Facts, Open Products Facts experimental and specific APIs
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1214,9 +1498,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Providing knowledge panels for a particular Open Food Facts facet (category, brand, etc...)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1263,9 +1552,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Dev
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1274,7 +1568,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Dev
+            
+  
+    Dev
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1290,9 +1588,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Introduction to Product Opener developer documentation
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1313,9 +1616,42 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to add a translation
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/how-to-add-generic-recommendation-panel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to Add a Generic Recommendation Panel for a Category
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1336,9 +1672,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to debug Minion import and export tasks
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1359,9 +1700,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to develop on the producers platform
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1382,9 +1728,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use Docker to Develop - a guide
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1405,9 +1756,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use WebComponents
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1428,9 +1784,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How can I learn the Perl programming language?
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1451,9 +1812,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to setup the Dev environment (quick start guide)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1474,9 +1840,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to deploy a release
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1497,9 +1868,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to update Agribalyse (Ecoscore)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1520,9 +1896,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use automated pull request actions
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1543,9 +1924,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use direnv
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1566,9 +1952,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use Gitpod for Remote Development
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1589,9 +1980,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use pages from openfoodfacts-web
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1612,9 +2008,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use Perl REPL (re.pl)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1635,9 +2036,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to use VSCode
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1658,9 +2064,70 @@
   
   
   <span class="md-ellipsis">
+    
+  
     How to write and run tests
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/explain-dynamic-test-grouping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explain Dynamic Test Grouping System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/explain-javascript-usage-and-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explain JavaScript Usage and Strategy
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1681,9 +2148,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Explain nutrition data
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1704,9 +2176,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Explanation on packaging data
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1727,9 +2204,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Explain personal search
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1750,9 +2232,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Explanation on Docker Setup of pro platform for development
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1773,9 +2260,42 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Explanation on Taxonomy Build Cache
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/explain-user-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explain User Management and Authentication
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1796,9 +2316,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Reference Docker / Makefile commands
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1819,9 +2344,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Perl reference documentation
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1842,9 +2372,123 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Reference Perl code documentation
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explain-frontend-build-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explain Frontend Build Scripts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Events
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Events
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event Schemas
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1889,7 +2533,9 @@
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction
+      
+        Introduction
+      
     </span>
   </a>
   
@@ -1898,7 +2544,9 @@
         <li class="md-nav__item">
   <a href="#product-schema-version" class="md-nav__link">
     <span class="md-ellipsis">
-      Product schema version
+      
+        Product schema version
+      
     </span>
   </a>
   
@@ -1907,7 +2555,9 @@
         <li class="md-nav__item">
   <a href="#api-version" class="md-nav__link">
     <span class="md-ellipsis">
-      API version
+      
+        API version
+      
     </span>
   </a>
   
@@ -1916,7 +2566,9 @@
         <li class="md-nav__item">
   <a href="#schema-version-and-api-version-change-log" class="md-nav__link">
     <span class="md-ellipsis">
-      Schema version and API version change log
+      
+        Schema version and API version change log
+      
     </span>
   </a>
   
@@ -1924,9 +2576,33 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#2025-126-01-product-version-1003-api-version-35-new-product-nutrition-facts-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2025-126-01 - Product version 1003 - API version 3.5 - New product nutrition facts structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2025-06-11-product-version-1002-no-change-api-version-34-new-attributes-with-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2025-06-11 - Product version 1002 (no change) - API version 3.4 - New attributes with parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2025-06-11-product-version-1002-api-version-33-new-uploaded-and-selected-images-structure-new-api-for-image-upload-and-selection" class="md-nav__link">
     <span class="md-ellipsis">
-      2025-06-11 - Product version 1002 - API version 3.3 - New uploaded and selected images structure, new API for image upload and selection
+      
+        2025-06-11 - Product version 1002 - API version 3.3 - New uploaded and selected images structure, new API for image upload and selection
+      
     </span>
   </a>
   
@@ -1935,7 +2611,9 @@
           <li class="md-nav__item">
   <a href="#2025-03-12-product-version-1001-api-version-32-removed-ingredients_hierarchy-added-schema_version-made-brands-a-taxonomized-field" class="md-nav__link">
     <span class="md-ellipsis">
-      2025-03-12 - Product version 1001 - API version 3.2 - Removed ingredients_hierarchy, added schema_version, made brands a taxonomized field
+      
+        2025-03-12 - Product version 1001 - API version 3.2 - Removed ingredients_hierarchy, added schema_version, made brands a taxonomized field
+      
     </span>
   </a>
   
@@ -1944,7 +2622,9 @@
           <li class="md-nav__item">
   <a href="#2024-12-12-product-version-1000-api-version-31-renamed-ecoscore_-fields-to-environmental_score_" class="md-nav__link">
     <span class="md-ellipsis">
-      2024-12-12 - Product version 1000 - API version 3.1 - Renamed ecoscore_ fields to environmental_score_
+      
+        2024-12-12 - Product version 1000 - API version 3.1 - Renamed ecoscore_ fields to environmental_score_
+      
     </span>
   </a>
   
@@ -1953,7 +2633,9 @@
           <li class="md-nav__item">
   <a href="#warning-non-breaking-changes-not-indicated-in-change-logs-below" class="md-nav__link">
     <span class="md-ellipsis">
-      Warning: non-breaking changes not indicated in change logs below
+      
+        Warning: non-breaking changes not indicated in change logs below
+      
     </span>
   </a>
   
@@ -1962,7 +2644,9 @@
           <li class="md-nav__item">
   <a href="#product-version-999-changed-barcode-normalization" class="md-nav__link">
     <span class="md-ellipsis">
-      Product version 999 - Changed barcode normalization
+      
+        Product version 999 - Changed barcode normalization
+      
     </span>
   </a>
   
@@ -1971,7 +2655,9 @@
           <li class="md-nav__item">
   <a href="#product-version-998-api-version-3" class="md-nav__link">
     <span class="md-ellipsis">
-      Product version 998 - API version 3
+      
+        Product version 998 - API version 3
+      
     </span>
   </a>
   
@@ -1980,7 +2666,9 @@
           <li class="md-nav__item">
   <a href="#product-version-997-api-version-2" class="md-nav__link">
     <span class="md-ellipsis">
-      Product version 997 - API version 2
+      
+        Product version 997 - API version 2
+      
     </span>
   </a>
   
@@ -1989,7 +2677,9 @@
           <li class="md-nav__item">
   <a href="#product-version-996-api-version-1" class="md-nav__link">
     <span class="md-ellipsis">
-      Product version 996 - API version 1
+      
+        Product version 996 - API version 1
+      
     </span>
   </a>
   
@@ -1998,7 +2688,9 @@
           <li class="md-nav__item">
   <a href="#product-version-995-api-version-0" class="md-nav__link">
     <span class="md-ellipsis">
-      Product version 995 - API version 0
+      
+        Product version 995 - API version 0
+      
     </span>
   </a>
   
@@ -2019,6 +2711,7 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
@@ -2048,13 +2741,28 @@
 <p>The product schema version is an integer that is incremented each time there is a change.
 It was introduced in March 2025, with a value of 1001.
 For products updated after March 2025, the product schema version is saved in the schema_version field of the product object.
-For earlier products (or earlier product revisions), the product schema version is 1000 or below. It is not stored in the database, but it can be returned for API requests with an API version lesser than 3.2.</p>
+For earlier products (or earlier product revisions), the product schema version is 1000 or below. For such products/revisions, the schema version is not stored in the database, but can be returned for API requests with an API version lesser than 3.2.</p>
 <h2 id="api-version">API version<a class="headerlink" href="#api-version" title="Permanent link">#</a></h2>
 <p>Since 2012, we have used API versions like 0, 1, 2, 3 and 3.1.
 For each of those API version, we have a corresponding product schema version.</p>
 <p>When a client makes a request with a specific API version, we do our best to convert the response to the corresponding product schema version.</p>
 <p>Note: API v3 is under active development, and the API and corresponding product schema may change frequently.</p>
 <h2 id="schema-version-and-api-version-change-log">Schema version and API version change log<a class="headerlink" href="#schema-version-and-api-version-change-log" title="Permanent link">#</a></h2>
+<h3 id="2025-126-01-product-version-1003-api-version-35-new-product-nutrition-facts-structure">2025-126-01 - Product version 1003 - API version 3.5 - New product nutrition facts structure<a class="headerlink" href="#2025-126-01-product-version-1003-api-version-35-new-product-nutrition-facts-structure" title="Permanent link">#</a></h3>
+<p>Breaking changes:</p>
+<ul>
+<li>The nutrition facts structure has been changed to have a structure it lacked and better align with the current uses and needs of the database (see <a href="https://docs.google.com/document/d/19ZRrlWJraJm61E6U7AwxQ1uubPDvmSuNfl9F1oLC0Tg">2025 - API - Nutrition Facts Schema and API</a> for new structure and discussions)</li>
+<li><strong>This product version is still currently under active development</strong></li>
+</ul>
+<h3 id="2025-06-11-product-version-1002-no-change-api-version-34-new-attributes-with-parameters">2025-06-11 - Product version 1002 (no change) - API version 3.4 - New attributes with parameters<a class="headerlink" href="#2025-06-11-product-version-1002-no-change-api-version-34-new-attributes-with-parameters" title="Permanent link">#</a></h3>
+<p>Breaking changes:</p>
+<ul>
+<li>product attributes can now have parameters, such as a list of tags (used for the new Unwanted ingredients attribute)</li>
+</ul>
+<p>To avoid displaying product attributes with parameters that apps cannot handle yet, the /api/v[0-2]/attributes_groups API
+does not return attributes with parameters.</p>
+<p>This does not affect the product READ API, if the attribute parameters are sent, then the value of the attribute will be returned
+by the product READ API (e.g. /api/v2/product) even if the version is less than 3.4.</p>
 <h3 id="2025-06-11-product-version-1002-api-version-33-new-uploaded-and-selected-images-structure-new-api-for-image-upload-and-selection">2025-06-11 - Product version 1002 - API version 3.3 - New uploaded and selected images structure, new API for image upload and selection<a class="headerlink" href="#2025-06-11-product-version-1002-api-version-33-new-uploaded-and-selected-images-structure-new-api-for-image-upload-and-selection" title="Permanent link">#</a></h3>
 <p>Breaking changes:</p>
 <ul>
@@ -2080,7 +2788,7 @@ For each of those API version, we have a corresponding product schema version.</
 <h3 id="warning-non-breaking-changes-not-indicated-in-change-logs-below">Warning: non-breaking changes not indicated in change logs below<a class="headerlink" href="#warning-non-breaking-changes-not-indicated-in-change-logs-below" title="Permanent link">#</a></h3>
 <p>There were lots of non-breaking changes (new fields) from 2012 to 2024. Those changes did not trigger a change to the API version, and their history has not been listed.</p>
 <h3 id="product-version-999-changed-barcode-normalization">Product version 999 - Changed barcode normalization<a class="headerlink" href="#product-version-999-changed-barcode-normalization" title="Permanent link">#</a></h3>
-<p>The normalization of leading 0s has been changed. See <a href="/ref-barcode-normalization.md">Barcode normalization</a></p>
+<p>The normalization of leading 0s has been changed. See <a href="../ref-barcode-normalization/">Barcode normalization</a></p>
 <h3 id="product-version-998-api-version-3">Product version 998 - API version 3<a class="headerlink" href="#product-version-998-api-version-3" title="Permanent link">#</a></h3>
 <p>Breaking changes:</p>
 <ul>
@@ -2147,10 +2855,11 @@ For each of those API version, we have a corresponding product schema version.</
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
