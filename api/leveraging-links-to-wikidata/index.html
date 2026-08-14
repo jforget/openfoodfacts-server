@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="https://static.openfoodfacts.org/images/logos/off-logo-favicon-light.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -57,6 +57,22 @@
 
     
     
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.openfoodfacts.org/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '16']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
   </head>
   
   
@@ -2458,16 +2474,16 @@
 <li>We provide the Wikidata QID, which is an unambiguous, stable and reliable identifier for a concept that will be useful to actually retrieve info from Wikipedia and Wikidata.</li>
 </ul>
 <h5 id="example">Example<a class="headerlink" href="#example" title="Permanent link">#</a></h5>
-<p>https://world.openfoodfacts.org/categories.json</p>
+<p>https://world.openfoodfacts.org/facets/categories.json</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;linkeddata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;wikidata:en&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Q40050&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://world.openfoodfacts.net/category/beverages&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://world.openfoodfacts.net/facets/categories/beverages&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Beverages&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;en:beverages&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;products&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">14196</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Beverages → https://world.openfoodfacts.org/category/beverages → Q40050 → https://www.wikidata.org/wiki/Q40050
+<p>Beverages → https://world.openfoodfacts.org/facets/category/beverages → Q40050 → https://www.wikidata.org/wiki/Q40050
 As you see, you'll get a beautiful image, information about the Quality label... As Wikidata is a Wiki, the knowledge you'll be able to retrieve will increase over time.</p>
 <h4 id="retrieving-info-from-wikipedia-and-wikidata">Retrieving info from Wikipedia and Wikidata<a class="headerlink" href="#retrieving-info-from-wikipedia-and-wikidata" title="Permanent link">#</a></h4>
 <p>You can use the Wikipedia and Wikidata APIs to get the information you want:</p>
@@ -2536,7 +2552,7 @@ As you see, you'll get a beautiful image, information about the Quality label...
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

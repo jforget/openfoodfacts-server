@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="https://static.openfoodfacts.org/images/logos/off-logo-favicon-light.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -57,6 +57,22 @@
 
     
     
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.openfoodfacts.org/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '16']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
   </head>
   
   
@@ -2615,9 +2631,9 @@
 </ul>
 <h4 id="using-the-raw-api">Using the Raw API<a class="headerlink" href="#using-the-raw-api" title="Permanent link">#</a></h4>
 <ul>
-<li>The API is adding a new ecoscore_grade field from A to F. Technically wise, it behaves like the Nutri-Score, so you can clone part of your Nutri-Score implementation</li>
+<li>The API is adding a new ecoscore_grade field from A+ to F. Technically wise, it behaves like the Nutri-Score, so you can clone part of your Nutri-Score implementation</li>
 <li>If (and only if) the server sends back a proper value (a+, a, b, c, d, e or f), display the new score, otherwise, display our gray placeholder</li>
-<li><a href="https://world.openfoodfacts.org/api/v0/product/3414280980209.json?fields=environmental_score_grade">https://world.openfoodfacts.org/api/v0/product/3414280980209.json?fields=environmental_score_grade</a></li>
+<li><a href="https://world.openfoodfacts.org/api/v3/product/3414280980209.json?fields=environmental_score_grade">https://world.openfoodfacts.org/api/v3/product/3414280980209.json?fields=environmental_score_grade</a></li>
 <li>Response: <code>{"status_verbose":"product found","product":{"ecoscore_grade":"b"},"status":1,"code":"3414280980209"}</code></li>
 <li>https://world.openfoodfacts.org/api/v0/product/3414280980209.json?fields=ecoscore_grade</li>
 <li>Here are the visuals.<ul>
@@ -2653,7 +2669,7 @@
 <li><strong><span style={{textDecoration: 'underline'}}>Add a message if we have a category but no Green-Score</span></strong><ul>
 <li><em>if "en:categories-completed" _in states_tags</em> <strong><span style={{textDecoration: 'underline'}}>AND</span></strong> ecoscore<em>grade=Null</em><ul>
 <li>We could not compute an Green-Score for this product. It might be that the category is not specific enough or that we don't have supporting data for this category. If you believe this is an error, you can email <a href="mailto:contact@example.com">contact@example.com</a></li>
-<li>You can get states with <a href="https://world.openfoodfacts.org/api/v0/product/3414280980209.json?fields=environmental_score_grade,states_tags">https://world.openfoodfacts.org/api/v0/product/3414280980209.json?fields=environmental_score_grade,states_tags </a></li>
+<li>You can get states with <a href="https://world.openfoodfacts.org/api/v3/product/3414280980209.json?fields=environmental_score_grade,states_tags">https://world.openfoodfacts.org/api/v3/product/3414280980209.json?fields=environmental_score_grade,states_tags </a></li>
 </ul>
 </li>
 </ul>
@@ -2675,13 +2691,13 @@
 </li>
 <li>Asking your users for a photo should be enough</li>
 <li>You can otherwise add toggles for Explicit labels (please add a photo of them to avoid mistakes)</li>
-<li>You can get states with <a href="https://world.openfoodfacts.org/api/v0/product/3414280980209.json?fields=environmental_score_grade,states_tags">https://world.openfoodfacts.org/api/v0/product/3414280980209.json?fields=environmental_score_grade,states_tags </a></li>
+<li>You can get states with <a href="https://world.openfoodfacts.org/api/v3/product/3414280980209.json?fields=environmental_score_grade,states_tags">https://world.openfoodfacts.org/api/v3/product/3414280980209.json?fields=environmental_score_grade,states_tags </a></li>
 </ul>
 </li>
 <li><strong><span style={{textDecoration: 'underline'}}>Add a message if no origins are available</span></strong><ul>
 <li>if "en:origins-to-be-completed" in states_tags<ul>
 <li><code>"The Green-Score takes into account the origins of the ingredients. Please take them into a photo (ingredient list and/or any geographic claim or edit the product so that they can be taken into account. If it is not clear, you can contact the food producer."</code></li>
-<li>You can get states with <a href="https://world.openfoodfacts.org/api/v0/product/3414280980209.json?fields=environmental_score_grade,states_tags">https://world.openfoodfacts.org/api/v0/product/3414280980209.json?fields=environmental_score_grade,states_tags </a></li>
+<li>You can get states with <a href="https://world.openfoodfacts.org/api/v3/product/3414280980209.json?fields=environmental_score_grade,states_tags">https://world.openfoodfacts.org/api/v3/product/3414280980209.json?fields=environmental_score_grade,states_tags </a></li>
 </ul>
 </li>
 </ul>
@@ -2697,7 +2713,7 @@
 <li>It will get automatically parsed and get used to compute the Green-Score</li>
 </ul>
 </li>
-<li>You can get states with <a href="https://world.openfoodfacts.org/api/v0/product/3414280980209.json?fields=ecoscore_grade,environmental_score_alpha,states_tags">https://world.openfoodfacts.org/api/v0/product/3414280980209.json?fields=environmental_score_grade,ecoscore_alpha,states_tags</a></li>
+<li>You can get states with <a href="https://world.openfoodfacts.org/api/v3/product/3414280980209.json?fields=environmental_score_grade,states_tags">https://world.openfoodfacts.org/api/v3/product/3414280980209.json?fields=environmental_score_grade,states_tags</a></li>
 </ul>
 </li>
 <li><strong><span style={{textDecoration: 'underline'}}>Sharing some of your code</span></strong><ul>
@@ -2769,7 +2785,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

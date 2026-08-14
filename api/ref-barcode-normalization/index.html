@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="https://static.openfoodfacts.org/images/logos/off-logo-favicon-light.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -57,6 +57,22 @@
 
     
     
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.openfoodfacts.org/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '16']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
   </head>
   
   
@@ -671,6 +687,17 @@
     <span class="md-ellipsis">
       
         Normalization of barcodes in the API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#barcode-normalisation-and-checks-in-the-sdks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Barcode normalisation and checks in the SDKs
       
     </span>
   </a>
@@ -2433,6 +2460,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#barcode-normalisation-and-checks-in-the-sdks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Barcode normalisation and checks in the SDKs
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2468,10 +2506,10 @@
 <h2 id="the-problem-barcodes-may-be-prefixed-by-a-varying-number-of-0s">The problem: barcodes may be prefixed by a varying number of 0s<a class="headerlink" href="#the-problem-barcodes-may-be-prefixed-by-a-varying-number-of-0s" title="Permanent link">#</a></h2>
 <p>Different types of barcodes can be found on products. The most common are:</p>
 <ul>
-<li>EAN-13 / GTIN-13: 13 digit barcode</li>
-<li>EAN-8: 8 digit barcode, short version of EAN-13 barcodes that have 5 leading 0s</li>
-<li>UPC-A / UPC-12: 12 digit barcode that were used mostly in the US and Canada. A leading 0 can be added to get the corresponding EAN-13.</li>
-<li>UPC-E: 7 digit barcode, short version of UPC-A</li>
+<li>EAN-13 / GTIN-13: 13 digits barcode</li>
+<li>EAN-8: 8 digits barcode, short version of EAN-13 barcodes that have 5 leading 0s</li>
+<li>UPC-A / UPC-12: 12 digits barcode that were used mostly in the US and Canada. A leading 0 can be added to get the corresponding EAN-13.</li>
+<li>UPC-E: 7 digits barcode, short version of UPC-A</li>
 <li>EAN-14 / GTIN-14: used for non-consumer facing products (e.g. a case of individal products). a leading 0 can be added to EAN-13 to get the corresponding EAN-14.</li>
 </ul>
 <p>The same code could be printed on products with a different number of leading 0s.
@@ -2479,12 +2517,20 @@ Additionally, some barcode scanners may add or remove leading 0s.</p>
 <p>As the barcode is used as the key in Open Food Facts, we can end up with duplicate products that just differ by the number of leading 0s.</p>
 <h2 id="the-solution-barcode-normalization">The solution: barcode normalization<a class="headerlink" href="#the-solution-barcode-normalization" title="Permanent link">#</a></h2>
 <p>In Open Food Facts, we choose to fix the number of leading 0s in this way:</p>
-<p>All barcodes with 7 digits or less (after leading 0s are removed) are padded with leading 0s so that they have 8 digits.</p>
-<p>All barcodes with 9 to 12 digits are padded with leading 0s so that they have 13 digits.</p>
-<p>The "code" field in the product database, database dumps and exports is normalized in this way.</p>
+<ul>
+<li>All barcodes with 7 digits or less (after leading 0s are removed) are padded with leading 0s so that they have 8 digits.</li>
+<li>All barcodes with 9 to 12 digits are padded with leading 0s so that they have 13 digits.</li>
+<li>The <code>code</code> field in the product database, database dumps and exports is normalized in this way.</li>
+</ul>
 <h3 id="normalization-of-barcodes-in-the-api">Normalization of barcodes in the API<a class="headerlink" href="#normalization-of-barcodes-in-the-api" title="Permanent link">#</a></h3>
-<p>The Open Food Facts API automatically normalize the barcode passed in the "code" field for both READ and WRITE requests.</p>
-<p>So a request for the 12 digit barcode 034000470693 will return the product saved with "code" 0034000470693.</p>
+<ul>
+<li>The Open Food Facts API automatically normalizes the barcode passed in the "code" field for both READ and WRITE requests.</li>
+<li>So a request for the 12 digit barcode <code>034000470693</code> will return the product saved with "code" <code>0034000470693</code>.</li>
+</ul>
+<h3 id="barcode-normalisation-and-checks-in-the-sdks">Barcode normalisation and checks in the SDKs<a class="headerlink" href="#barcode-normalisation-and-checks-in-the-sdks" title="Permanent link">#</a></h3>
+<ul>
+<li>Some of the Open Food Facts SDKs provide easy utils to deal with that.</li>
+</ul>
 
 
 
@@ -2537,7 +2583,7 @@ Additionally, some barcode scanners may add or remove leading 0s.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
